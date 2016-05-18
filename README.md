@@ -54,11 +54,11 @@ for this directory structure
 In order to attempt to replicate real world scenarios please provide a compatible schema for each database that you want
 The load testing will try to simulate traffic that reflects those weightings.
 
-You should copy the schemata for each supported database to the relevant folder.  
+You should copy the schemata for each supported database to the relevant folder.
 This Json should be the exact mappings that es autogenerates per type.
 
-
- 
+Installing elasticsearch locally may need the murmur3 plugin 
+  * MacOS - sudo /usr/local/Cellar/elasticsearch/2.3.2/libexec/bin/plugin install mapper-murmur3
 
 
 
