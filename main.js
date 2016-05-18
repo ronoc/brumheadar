@@ -20,7 +20,7 @@ let logger					= require('./lib/common/logger').forFile(module.filename);
 
 let IndicesCreator = require('./lib/indices-creator');
 
-const BULKSIZE_DEFAULT 	= 1000;
+const BULKSIZE_DEFAULT 	= 1;
 const BULKCOUNT_DEFAULT = 5;
 const MODE_DEFAULT 			= "scatter";
 
@@ -38,11 +38,12 @@ let mode 				= argv.m || MODE_DEFAULT;
 	 		Multiplexer.process(mode, bulkcount, bulksize, cb);
 	 	}],
 	 	(err) => {
-			console.log("error " + err);
 			if(err){
+				console.log("error " + err);
 				logger.warn("err " + err);
 				process.exit(1);
 			}
 			logger.info("Komplett");
+			process.exit(0);
 	 	});	
 })();
