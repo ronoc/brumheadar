@@ -1,0 +1,32 @@
+{
+  "name": "db-performance-meter",
+  "version": "0.0.1",
+  "description": "Tool to test NoSql DDBs. Using an arsenal of various reads and writes the timings will be output to statsd and logged also piped to a local Shiny R Based metrics dashboard. Useful to deterimine underling PaaS issues when running maintaining high load systems on out of the box PaaS providers",
+  "main": "main.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ronoc/db-performance-meter.git"
+  },
+  "author": "Conor Curran",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ronoc/db-performance-meter"
+  },
+  "homepage": "https://github.com/ronoc/db-performance-meter",
+  "dependencies": {
+    "async": "^0.9.0",
+    "country-data": "^0.0.18",
+    "crypto": "^0.0.3",
+    "dotenv": "^2.0.0",
+    "elasticsearch": "^3.1.4",
+    "lodash": "^3.6.0",
+    "node-statsd": "x.x.x",
+    "redis": "^0.12.1",
+    "request": "^2.51.0",
+    "require-dir": "^0.3.0",
+    "sha1": "~1.1.0",
+    "sugar": "^1.4.1",
+    "winston": "^2.2.0",
+    "yargs": "^3.7.0"
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "name": "elasticsearch",  
+  "main": "elasticsearch-adapter.js",
+  "generator" : "generator.js"
+}
