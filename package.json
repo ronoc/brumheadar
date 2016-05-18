@@ -1,18 +1,17 @@
 {
-  "name": "db-performance-meter",
+  "name": "brumheadar",
   "version": "0.0.1",
   "description": "Tool to test NoSql DDBs. Using an arsenal of various reads and writes the timings will be output to statsd and logged also piped to a local Shiny R Based metrics dashboard. Useful to deterimine underling PaaS issues when running maintaining high load systems on out of the box PaaS providers",
   "main": "main.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ronoc/db-performance-meter.git"
+    "url": "https://github.com/ronoc/brumheadar.git"
   },
-  "author": "Conor Curran",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ronoc/db-performance-meter"
+    "url": "https://github.com/ronoc/brumheadar"
   },
-  "homepage": "https://github.com/ronoc/db-performance-meter",
+  "homepage": "https://github.com/ronoc/brumheadar",
   "dependencies": {
     "async": "^0.9.0",
     "country-data": "^0.0.18",
