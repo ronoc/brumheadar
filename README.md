@@ -13,6 +13,3 @@ The tool uses statsD to output the timings of the various operations.
 Currently performance analysis is supported on elasticsearch.
 Schemas should be added to the appropriate folder for each DB in the "schemata" folder. 
 
-
-# TODO
-Make default schemas per supported database that can be used in the event that the user cannot provide or will not provide their own. 
