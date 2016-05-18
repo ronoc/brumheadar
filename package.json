@@ -14,6 +14,7 @@
   "homepage": "https://github.com/ronoc/brumheadar",
   "dependencies": {
     "async": "^0.9.0",
+    "bignum": "^0.11.0",
     "country-data": "^0.0.18",
     "crypto": "^0.0.3",
     "dotenv": "^2.0.0",
