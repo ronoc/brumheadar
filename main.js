@@ -20,14 +20,13 @@ let logger					= require('./lib/common/logger').forFile(module.filename);
 
 let IndicesCreator = require('./lib/indices-creator');
 
-const BULKSIZE_DEFAULT 	= 1;
-const BULKCOUNT_DEFAULT = 5;
+const BULKSIZE_DEFAULT 	= 5;
+const BULKCOUNT_DEFAULT = 1;
 const MODE_DEFAULT 			= "scatter";
 
-
-let bulkcount 	= argv.bs || BULKCOUNT_DEFAULT;
+let bulkcount		= argv.bs || BULKCOUNT_DEFAULT;
 let bulksize 		= argv.bc || BULKSIZE_DEFAULT;
-let mode 				= argv.m || MODE_DEFAULT;
+let mode 				= argv.m 	|| MODE_DEFAULT;
 
 (function(){
 	async.waterfall([
