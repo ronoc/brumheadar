@@ -58,7 +58,9 @@ You should copy the schemata for each supported database to the relevant folder.
 This Json should be the exact mappings that es autogenerates per type.
 
 Installing elasticsearch locally may need the murmur3 plugin 
-  * MacOS - sudo /usr/local/Cellar/elasticsearch/2.3.2/libexec/bin/plugin install mapper-murmur3
+for MacOS running ES under brew this should be something like
+
+```sudo /usr/local/Cellar/elasticsearch/2.3.2/libexec/bin/plugin install mapper-murmur3```
 
 
 
