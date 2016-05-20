@@ -15,12 +15,12 @@ ui <- fluidPage(
   plotOutput('test')
 )
 
-points <- c()
+points <- list()
 
 server <- function(input, output) {
   observeEvent(input$dataPoint, {
     if (input$dataPoint >= 0) {
-      points <<- c(points, input$dataPoint)
+      points[[input$metric]] <<- c(points[[input$metric]], input$dataPoint)
       print(c("Received metric:", input$metric, input$dataPoint))
     }
   })
@@ -41,13 +41,12 @@ server <- function(input, output) {
       invalidate()
     }
 
-    if (is.null(points)) {
-      plot.new()
+    if (length(points) > 0) {
+      plot(points[[1]])
+      lines(points[[1]])
     } else {
-      plot(points, type="n")
+      plot.new()
     }
-
-    lines(points)
   })
 }
 

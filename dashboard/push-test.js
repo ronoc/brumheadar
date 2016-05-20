@@ -26,15 +26,15 @@ client.on('connect', function(connection) {
     function sendInit() {
         var initMsg = {"method":"init","data":{"num:shiny.number":1,".clientdata_output_test_width":1340,".clientdata_output_test_height":400,".clientdata_output_test_hidden":false,".clientdata_pixelratio":2,".clientdata_url_protocol":"http:",".clientdata_url_hostname":"localhost",".clientdata_url_port":"3279",".clientdata_url_pathname":"/",".clientdata_url_search":"",".clientdata_url_hash_initial":"",".clientdata_singletons":"",".clientdata_allowDataUriScheme":true}};
         if (connection.connected) {
-            var number = Math.round(Math.random() * 0xFFFFFF);
             connection.send(JSON.stringify(initMsg));
         }
     }
 
     function sendUpdate() {
         var n = Math.round(Math.random()*128);
+        var o = Math.round(Math.random()*3);
         console.log('sending update...', n);
-        var updateMsg = {"method":"update","data":{"dataPoint:shiny.number":n,"metric":"metricName"+n}};
+        var updateMsg = {"method":"update","data":{"dataPoint:shiny.number":n,"metric":"metricName"+o}};
         connection.send(JSON.stringify(updateMsg));
     }
     sendInit();
