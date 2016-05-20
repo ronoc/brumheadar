@@ -34,7 +34,7 @@ client.on('connect', function(connection) {
     function sendUpdate() {
         var n = Math.round(Math.random()*128);
         console.log('sending update...', n);
-        var updateMsg = {"method":"update","data":{"dataPoint:shiny.number":n}};
+        var updateMsg = {"method":"update","data":{"dataPoint:shiny.number":n,"metric":"metricName"+n}};
         connection.send(JSON.stringify(updateMsg));
     }
     sendInit();

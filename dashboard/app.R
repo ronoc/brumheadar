@@ -9,7 +9,8 @@ ui <- fluidPage(
   conditionalPanel(
     label = "Hidden panel",
     condition = "false",
-    numericInput('dataPoint', label='Datapoint', value=-1)
+    numericInput('dataPoint', label='Datapoint', value=-1),
+    textInput('metric', label='Metric')
   ),
   plotOutput('test')
 )
@@ -20,7 +21,7 @@ server <- function(input, output) {
   observeEvent(input$dataPoint, {
     if (input$dataPoint >= 0) {
       points <<- c(points, input$dataPoint)
-      print(points)
+      print(c("Received metric:", input$metric, input$dataPoint))
     }
   })
 
